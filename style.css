@@ -1,0 +1,237 @@
+/* ESTILO GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(43, 43, 43);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.github button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(117, 70, 245);
+    color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 30px;
+    cursor:pointer;
+    width: 230px;
+    height:60px;
+}
+
+.github button:hover{
+    box-shadow:  0 0 8px ;
+}
+
+h2.titulo{/* MEUS CERTIFICADOS */
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    text-align:center;
+}
+
+h2.titulo span{/* MEUS CERTIFICADOS */
+    color: rgb(117, 70, 245);
+}
+
+
+
+
+
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: 2s;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 100px;
+    font-size: larger;
+    font-weight: 530;
+}
+
+
+
+header a:hover{
+    color: rgb(117, 70, 245);
+    transform: scale(2s);
+}
+
+
+
+.logo img{
+    
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+}
+
+
+
+
+/* ESTILO TOPO */
+
+
+
+section.topo-site{
+    padding: 60px 4%;
+}
+
+section.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;/*espaçamento de elementos*/
+}
+
+.topo-site h1{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    line-height: 60px;  /*distancia uma linha da outra*/
+}
+
+.topo-site h1 span{
+    color: rgb(117, 70, 245);/*estiliza somente a escrita dentro do span*/
+}
+
+.topo-site .txt-topo-site p{
+    color: rgb(255, 255, 255);
+    margin: 55px;/*distancia os elementos*/
+    font-size: larger;
+}
+
+
+@keyframes animaçao{
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px;
+    }
+}
+
+.topo-site .img-topo-site img{
+    position:relative;/*comandos:top,left,bottom,right só funcionam com elementos diferentes de static*/
+    animation: animaçao 2s/*tempo animacao*/ ease-in-out/*velocidade*/ infinite/*animaçao infinita*/ alternate/*caminha do 0-100 e do 100-0*/;
+    border-radius: 150px;
+    width: 350px;
+    height: 350px;
+}
+
+
+/* ESTILO CERTIFICADOS */
+
+section.certificados{
+    padding: 85px 4%;;
+}
+
+.certificados .certificados-box {/* divs dos certificados*/
+    color:  rgb(255, 255, 255);
+    padding: 40px;/* espaçamento geral*/
+    border: 2px solid rgb(117, 70, 245);
+     border-radius: 25px;
+    margin-top: 60px;/*espaçamento de cima ente a escrita e a box*/
+    transition: 2s;/*determina a suavidade do zoom transform*/
+   
+}
+
+.certificados .certificados-box:hover{/* divs dos certificados*/
+    transform: scale(1.05);/* efeito zoom*/
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.788);/*efeito sombreado*/
+}
+
+
+
+.certificados .certificados-box h3{/* divs dos certificados*/
+    font-size: 20px;
+    margin: 5px 0px;/* espaçamento quer tera fora da imagem cima/baixo e esquerda/direita*/
+   
+}
+
+
+section.certificados .flex{
+    gap: 60px;/*espaçamento de elementos*/
+} 
+
+/* ESTILO PROJETOS */
+
+
+
+section.prj {
+    padding: 80px 4%;
+}
+
+section.prj .flex {
+    justify-content: space-around;
+}
+
+
+.divsrolamento{
+    width: 260px;
+    height: 340px;
+    margin: 60px;
+    background-size: cover;/*adapta a img dentro da div*/
+    background-position: 100%/*horizontal*/ 0%/*vertical, faz o efeito rolagem comecar com o topo da img*/;
+    transition: 3s;/*suavidade do rolamento*/
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;/*faz com que o efeito rolamento funcione*/
+}
+
+.divsrolamento:hover{/*efeito rolamento*/
+    background-position: 100%/*horizontal*/ 100%/*vertical, faz o efeito rolagem ir para o final da imagem*/;
+    /*  box-shadow: 0 0 8px rgb(255, 255, 255);  */
+}
+
+.overlay{
+    position: absolute;/*trabalha dentro da classe .paola por conta do comando relative*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 32, 0.438);
+    border-radius: 40px;
+    /*essas propriedades alinham o texto no centro da div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*essas propriedades alinham o texto no centro da div*/
+    
+}
+
+.overlay a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
